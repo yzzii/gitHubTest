@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Print</title>
+<style>
+body {
+	margin:0;
+	padding:10px
+}
+
+ul {
+	list-style: none;
+}
+
+page {
+	background: white;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5cm;
+	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+/* 페이지 사이즈 */
+page[size="A4"] {
+	width: 21cm;
+	height: 29.7cm;
+}
+
+page[size="A4"][layout="landscape"] {
+	width: 29.7cm;
+	height: 21cm;
+}
+
+page[size="A3"] {
+	width: 29.7cm;
+	height: 42cm;
+}
+
+page[size="A3"][layout="landscape"] {
+	width: 42cm;
+	height: 29.7cm;
+}
+
+page[size="A5"] {
+	width: 14.8cm;
+	height: 21cm;
+}
+
+page[size="A5"][layout="landscape"] {
+	width: 21cm;
+	height: 14.8cm;
+}
+
+
+table, figure, .sector {
+       page-break-inside: avoid;
+}
+
+/* 
+	table, figure 또는 sector 라고 클래스를 지정해 준 요소는 페이지 때문에 끊기지 않도록 처리해주는 구문입니다. 
+	이렇게 지정한 요소가 만약 A4 용지 단위로 프린트물이 나올 때 중간에 걸리게 되면 
+	통째로 그 다음 장으로 넘어가게 처리해줍니다.
+ */
+ 
+@media print {
+	body, page {
+		margin: 0;
+		box-shadow: 0;
+	}
+	
+	.page-divide {
+             page-break-after: always; /* page 나눔현상 */
+      }
+/*page 분할 */
+}
+</style>
+</head>
+<body>
+	<page size="A4"></page>
+	<page size="A4" layout="landscape"></page>
+	<div class="page-divide"></div>
+	<page size="A5"></page>
+	<page size="A5" layout="landscape"></page>
+	<div class="page-divide"></div>
+	<page size="A3"></page>
+	<page size="A3" layout="landscape"></page>
+</body>
+</html>

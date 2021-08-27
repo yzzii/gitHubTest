@@ -1,0 +1,7 @@
+/**
+ * AUIGrid 3.0.10 License
+ * License Type : Enterprise
+ * Client ID : AUISoft DEMO
+ * Host Domain : auisoft.net
+ */
+ AUIGridLicense = "eyJjdCI6IkNLWDF4QnFhcFp6dE1ualMxSWx1RWh5UHBEWXltaXkvREhYV0RrMHI2TmNrcU8xa2xnVnd4SXQ5U1lkNE5wREVHM05HRXI3blRkaS9ZWHlTVlhXRXZQUXJqSnVlYkNTcVE2czFTZmhLWmJJPSIsIml2IjoiNTIzNzRjODE3ZDEyODQzNzE2NWI3ZGNkYWVkZmQ3MzAiLCJzIjoiOWMyOTZiNzA1NWMyZDc5ZSJ9";

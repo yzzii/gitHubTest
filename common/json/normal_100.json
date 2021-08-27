@@ -1,0 +1,62 @@
+[{
+
+    "id": "#Cust0",
+
+    "date": "2014-10-01",
+
+    "name": "Steve",
+
+    "country": "USA",
+
+    "flag": "usa.png",
+
+    "product": "IPad Air",
+
+    "color": "Green",
+
+    "quantity": 3,
+
+    "price": 630700
+
+}, {
+
+    "id": "#Cust1",
+
+    "date": "2014-09-30",
+
+    "name": "Emma",
+
+    "country": "Korea",
+
+    "flag": "korea.png",
+
+    "product": "LG G3",
+
+    "color": "Pink",
+
+    "quantity": 1,
+
+    "price": 503800
+
+}, {
+
+    "id": "#Cust2",
+
+    "date": "2014-09-29",
+
+    "name": "Emma",
+
+    "country": "Japan",
+
+    "flag": "japan.png",
+
+    "product": "IPad Air",
+
+    "color": "Yellow",
+
+    "quantity": 7,
+
+    "price": 66900
+
+}
+]
