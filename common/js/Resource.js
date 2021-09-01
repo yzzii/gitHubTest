@@ -42,6 +42,22 @@ $('iframe').ready(function(){
 
 //@4 @4 Full Screen
 
+let fullscreen;
+let fsEnter = document.getElementById("fullscr");
+fsEnter.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (!fullscreen) {
+    fullscreen = true;
+    document.documentElement.requestFullscreen();
+    // fsEnter.innerHTML = "Exit Fullscreen"; txext 변경
+  } else {
+    fullscreen = false;
+    document.exitFullscreen();
+    // fsEnter.innerHTML = "Go Fullscreen"; txext 변경
+  }
+});
+
+
 //@5 tapScript
 function myFunction(x) {
 	x.classList.toggle("change");
@@ -155,4 +171,7 @@ document.addEventListener("click", closeAllSelect);
 
 
 // grid_example
+
+
+
 
