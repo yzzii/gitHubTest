@@ -1087,6 +1087,23 @@
 					<div class="chart" id="chart1"></div>
 				</div>
 			</div>
+			
+			<!-- 관련스크립트 @7 레이어 팝업띄우기 -->
+			<h2 id="popOpenBtn">♥레이어 팝업 클릭♥</h2>
+			<div id ="popup_mask" ></div> <!-- 팝업 배경 DIV -->
+			<div id="popWarp" class="pop_middle" style="display:hide;">
+				<div class="pop_tit">
+					<h6>팝업타이틀</h6>					
+					<span id="popCloseBtn">&times;</span>
+				</div>
+				<div class="pop_contents">
+					컨텐츠 영역
+				</div>
+				<div id="popCloseBtn" class="pop_button">
+					<button><i class="close"></i><span>닫기</span></button>
+					<button><span>닫기</span></button>
+				</div>
+			</div>
 			<!-- //content area-->
 		</div>
 		<script>

@@ -163,7 +163,7 @@ header > a {
 
 
 header>.top_icon_menu {
-		right: 45px;
+		right: 0;
 		position: absolute;
 }
 
@@ -174,6 +174,11 @@ header>.top_icon_menu>button i+span {
 
 header>.top_icon_menu>button {
 	font-size: 85%;
+}
+
+header>.top_icon_menu>button:last-child:after {
+	content: '';    
+	padding: 0 0 0 10px;
 }
 
 header>.top_icon_menu>button:after {
@@ -688,7 +693,7 @@ i.lamp_green {
 /* chart  */
 
 .chartArea{
-	height: calc(40% - 10px);
+	height: 200px;
     margin-bottom: 10px;
 }
 
@@ -702,7 +707,7 @@ i.lamp_green {
 
 .chart_group {
 	width: calc((100% - 30px) / 4);
-	height:100%;
+	height:200px;
 	margin-right:10px;
 	float:left;
 }
@@ -1761,7 +1766,7 @@ i.lamp_green {
     width: calc(( 100% - 50px)/5);
     margin-right: 10px;
     float: left;
-    height: 100%;
+    height: 200px;
     border: 1px solid var(--border-blue);
     position: relative;
 }
@@ -1874,7 +1879,7 @@ span.BorderLeftRight:after {
 }
 
 .svg.chart_bar {
-    height: calc((100% - 10px) / 2);
+    height: 200px;
     margin-bottom: 10px;
     position: relative;
     border: 1px solid var(--border-blue);
@@ -1882,7 +1887,7 @@ span.BorderLeftRight:after {
 }
 
 .svg.chart_bar>.bg {
-    height: 100%;
+    height: calc(100% - 40px);
     width: 100%;
     padding: 0px 10px;
     display: flex;
@@ -1896,7 +1901,7 @@ span.BorderLeftRight:after {
 }
 
 .svg.chart_bar>.bg .chart {
-        width: calc(90% - 170px);
+        width: calc(90% - 70px);
     background-color: var(--bg-bar-pkg);
     height: 60%;
     border-radius: 50px;
@@ -2018,6 +2023,75 @@ width: 100%;
     background-color: var(--bg-chart);
         padding: 10px;
 }
+
+
+/* popup */
+#popWarp {
+	width: 600px;
+    height: 300px;
+    background: #fff;
+    position: relative;
+    border: 1px solid var(--border-blue);
+    border-radius: 10px;
+    z-index: 99;
+}
+
+#popWarp>.pop_tit {
+    height: 50px;
+    width: 100%;
+    background-color: var(--bg-color-darkgreen);
+    color: var(--bg-body);
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    border: 0;
+}
+
+#popWarp>.pop_tit > span{
+	color:#ffffff
+}
+
+#popWarp>.pop_tit > h6 {
+	font-size: 120%;
+	color: #fff;
+}
+
+#popWarp>.pop_tit a {
+	font-size: 200%;
+	color: #fff;
+}
+
+#popWarp>.pop_contents {
+	height: calc(100% - 100px);
+    border: 1px solid var(--popup-grid-border);
+    padding: 10px;
+}
+
+
+#popWarp>.pop_button {	
+	height: 50px;
+    background-color: var(--bg-color-blue);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+#popOpenBtn,
+#popCloseBtn {
+	cursor: pointer;
+}
+
+#popup_mask { /* 팝업 배경 css */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+	background-color: #000;
+	opacity: 0.8;
+}
+
 /* print attr */
 
 page {

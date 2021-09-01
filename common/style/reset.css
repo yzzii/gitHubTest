@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+@charset "UTF-8";
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
 	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
@@ -17,7 +20,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup,
+article, aside, details, figcaption, figure, footer, header, hgroup,*::before
 	menu, nav, section {
 	display: block;
 }
@@ -44,7 +47,8 @@ table {
 	border-spacing: 0;
 }
 
-@charset "utf-8"; /* * @ RESET CSS * ------------------------------- */
+
+/* @ RESET CSS * ------------------------------- */
 html, body, div, p, span, strong, b, em, iframe, pre, h1, h2, h3, h4, h5,
 	h6, img, dl, dt, dd, fieldset, form, legend, label, table, caption,
 	thead, tbody, tfoot, tr, th, td, ul, ol, li, a, input, select, textarea
