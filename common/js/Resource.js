@@ -40,7 +40,8 @@ $('iframe').ready(function(){
 	$('iframe').contents().find('body').css('height', 'calc(100% - 20px)');
 });
 
-//@4 @4 Full Screen
+
+//@4 Full Screen
 
 let fullscreen;
 let fsEnter = document.getElementById("fullscr");
@@ -49,14 +50,51 @@ fsEnter.addEventListener("click", function (e) {
   if (!fullscreen) {
     fullscreen = true;
     document.documentElement.requestFullscreen();
-    // fsEnter.innerHTML = "Exit Fullscreen"; txext 변경
+   /* fsEnter.innerHTML = "Exit Fullscreen";*/
   } else {
     fullscreen = false;
     document.exitFullscreen();
-    // fsEnter.innerHTML = "Go Fullscreen"; txext 변경
+    /*fsEnter.innerHTML = "Go Fullscreen";*/
   }
 });
 
+/* @4 Full Screen 브라우저별
+
+let fullscreen;
+let fsEnter = document.getElementById("fullscr");
+fsEnter.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (!fullscreen) {
+    fullscreen = true;
+    document.documentElement.requestFullscreen();
+    fsEnter.innerHTML = "Exit Fullscreen";
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {  Firefox 
+    	 document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {  Chrome, Safari & Opera 
+    	  document.documentElement.webkitRequestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {  IE/Edge 
+    	  document.documentElement = window.top.document.body; //To break out of frame in IE
+    	  document.documentElement.msRequestFullscreen();
+      }
+  } else {
+    fullscreen = false;
+    document.exitFullscreen();
+    fsEnter.innerHTML = "Go Fullscreen";
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        window.top.document.msExitFullscreen();
+      }
+  }
+});
+
+*/
 
 //@5 tapScript
 function myFunction(x) {
