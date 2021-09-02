@@ -2144,6 +2144,47 @@
     /* 접기 펼치기 */
 
 
+
+    /* 아코디언 */
+
+    .accordian h6{
+        font-size: 100%;
+        padding: 10px;  
+        border: 1px solid var(--border-blue);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .accordian li{
+       margin-bottom:10px
+    }
+
+     /** 현재 활성화된 요소에 적용할 배경이미지 지정 */
+     .selected {
+        background: #2288dd !important;
+        color: #fff !important;      
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        
+        /*그라디언트 지정*/
+        background: linear-gradient(top, #6bb2ff 0%, #2288dd 100%) !important;
+        background: -moz-linear-gradient(top, #6bb2ff, #2288dd) !important; 
+        background: -webkit-gradient(linear, left top, left bottom, from(#6bb2ff), to(#2288dd)) !important;       
+    }
+    
+    /** 내용 영역 */
+    .accordian .content {
+        width:100%;
+        margin: 0;
+        border:1px solid var(--border-blue);
+        padding: 10px;
+        overflow-y: auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+    }
+
     /* print attr */
 
     page {

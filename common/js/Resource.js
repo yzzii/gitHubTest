@@ -42,46 +42,6 @@
 
 
 
-
-  // @7 레이어 팝업 브라우저 중앙에 띄우기
-
-  jQuery.fn.center = function () {
-    this.css("position","absolute");
-    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
-    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
-    return this;
-  }
-  showPopup = function() {
-  $("#popWarp").show();
-  $("#popWarp").center();
-  $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
-    $("body").css("overflow","hidden");//body 스크롤바 없애기
-  }
-
-  $("#popCloseBtn, #popCloseBtn1").click(function(event){
-    $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
-    $("#popWarp").css("display","none"); //팝업창 display none
-    $("body").css("overflow","auto");//body 스크롤바 생성
-    $("#popWarp").draggable();
-    });
-
-  //@4 Full Screen
-
-  let fullscreen;
-  let fsEnter = document.getElementById("fullscr");
-  fsEnter.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (!fullscreen) {
-      fullscreen = true;
-      document.documentElement.requestFullscreen();
-    /* fsEnter.innerHTML = "Exit Fullscreen";*/
-    } else {
-      fullscreen = false;
-      document.exitFullscreen();
-      /*fsEnter.innerHTML = "Go Fullscreen";*/
-    }
-  });
-
   /* @4 Full Screen 브라우저별
 
   let fullscreen;
@@ -120,6 +80,26 @@
 
   */
 
+  
+  //@4 Full Screen
+
+  let fullscreen;
+  let fsEnter = document.getElementById("fullscr");
+  fsEnter.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!fullscreen) {
+      fullscreen = true;
+      document.documentElement.requestFullscreen();
+    /* fsEnter.innerHTML = "Exit Fullscreen";*/
+    } else {
+      fullscreen = false;
+      document.exitFullscreen();
+      /*fsEnter.innerHTML = "Go Fullscreen";*/
+    }
+  });
+
+
+
   //@5 tapScript
   function myFunction(x) {
     x.classList.toggle("change");
@@ -148,44 +128,56 @@
   }
 
 
+  // @7 레이어 팝업 브라우저 중앙에 띄우기
 
-  $(function () {
-    jQuery.datetimepicker.setLocale('kr');
+  jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+    return this;
+  }
+  showPopup = function() {
+  $("#popWarp").show();
+  $("#popWarp").center();
+  $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
+    $("body").css("overflow","hidden");//body 스크롤바 없애기
+  }
 
-    jQuery('#datetime_picker').datetimepicker({
-    i18n:{
-    de:{
-    months:[
-        '1월','2월','3월','4월',
-        '5월','6월','7월','8월',
-        '9월','10월','11월','12월',
-    ],
-    dayOfWeek:[
-        "일", "월", "화", "수", 
-        "목", "금", "토.",
-    ]
-    }
-    },
-    timepicker:false,
-    format:'d.m.Y'
+  $("#popCloseBtn, #popCloseBtn1").click(function(event){
+    $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+    $("#popWarp").css("display","none"); //팝업창 display none
+    $("body").css("overflow","auto");//body 스크롤바 생성
+    $("#popWarp").draggable();
     });
-  });
 
 
-  var dropdown = document.getElementsByClassName("dropdown-btn");
-  var i;
 
-  for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("mouseover", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-  }
+  // @8 레이어 팝업 브라우저 중앙에 띄우기
+
+     // 첫 번재 항목이 펼쳐져 있도록 처리
+     $(".collapsible:eq(0) a").addClass("selected"); //첫번째 항목만 selected 클래스를 적용
+     $(".collapsible").not(":eq(0)").find(".content").hide(); //첫번째 항목 이외의 content를 숨김
+     
+     /** 링크에 대한 클릭 이벤트 처리 */
+     $(".collapsible h6").click(function() {            
+         $(this).toggleClass("selected");
+         //클릭된 나 자신을 제외한 나머리 링크들은 slected 클래스를 무조건 제거
+         $(".collapsible h6").not(this).removeClass("selected"); 
+
+         // 펼칠 내용 영역 선택
+         var target = $(this).parents(".collapsible").find(".content");
+
+         // 나머지 내용 영역을 선택
+         var other = $(".collapsible h6").not(this).parents(".collapsible").find(".content");
+
+         // 애니메이션으로 열고 닫기 처리
+         target.slideToggle(300);
+         other.slideUp(300);
+         
+         // 링크 페이지 이동 중지
+         return false;
+     });
+
 
   //@6 selectBox
   var x, i, j, l, ll, selElmnt, a, b, c;
@@ -271,4 +263,4 @@
   document.addEventListener("click", closeAllSelect);
 
 
-  // grid_example
+
