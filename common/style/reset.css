@@ -1,494 +1,494 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-@charset "UTF-8";
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
-	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
-	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
-	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
-	output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup,*::before
-	menu, nav, section {
-	display: block;
-}
-
-body {
-	line-height: 1;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/* @ RESET CSS * ------------------------------- */
-html, body, div, p, span, strong, b, em, iframe, pre, h1, h2, h3, h4, h5,
-	h6, img, dl, dt, dd, fieldset, form, legend, label, table, caption,
-	thead, tbody, tfoot, tr, th, td, ul, ol, li, a, input, select, textarea
-	{
-	margin: 0;
-	padding: 0;
-	border: 0 none;
-}
-
-body {
-	height: 100%;
-	width: 100%;
-	min-width: 1300px;
-	min-height: 800px;
-}
-
-ul, ol, li {
-	list-style: none;
-}
-
-em, address {
-	font-style: normal;
-}
-
-img {
-	border: 0 none;
-	font-size: 0;
-	line-height: 0;
-}
-
-sup {
-	position: relative;
-	top: 2px;
-	font-size: 11px;
-	line-height: 100%;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-caption {
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	font-size: 0;
-	line-height: 0;
-}
-
-th, td {
-	vertical-align: middle; /* white-space: nowrap */
-}
-
-a {
-	color: #333;
-	text-decoration: none;
-	line-height: 1;
-}
-
-a:hover, a:focus, a:active {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: #333;
-}
-
-*, html {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-
-*, *:before, *:after {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-
-/* 가독성 뛰어난 웹폰트 나눔바른고딕 링크*/
-@charset "UTF-8";
-
-@font-face {
-	font-family: NanumBarunGothic;
-	src: url(../Content/fonts/NanumBarunGothic.eot);
-	src: url(../Content/fonts/NanumBarunGothic.eot?#iefix)
-		format("embedded-opentype"),
-		url(../Content/fonts/NanumBarunGothic.woff) format("woff"),
-		url(../Content/fonts/NanumBarunGothic.ttf) format("truetype");
-	src: local("?"), url(../Content/fonts/NanumBarunGothic.woff)
-		format("woff")
-}
-
-@font-face {
-	font-family: NanumBarunGothicBold;
-	src: url(../Content/fonts/NanumBarunGothicBold.eot);
-	src: url(../Content/fonts/NanumBarunGothicBold.eot?#iefix)
-		format("embedded-opentype"),
-		url(../Content/fonts/NanumBarunGothicBold.woff) format("woff"),
-		url(../Content/fonts/NanumBarunGothicBold.ttf) format("truetype");
-	src: local("?"), url(../Content/fonts/NanumBarunGothicBold.woff)
-		format("woff")
-}
-
-*, *::after, *::before {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-
-html {
-	height: 100%;
-	width: 100%;
-	font-size: 62.5%;
-	/* 
-		 html overflow hidden으로 하면 컨텐츠가 다 짧림 중요 
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
 	*/
-}
 
-body, button, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6,
-	input, legend, li, ol, p, select, td, textarea, th, ul, i {
-	font-family: 'NanumBarunGothic', '맑은 고딕', '돋움', Dotum, AppleGothic, Sans-serif, Arial;
-	/* 
-		지정 순서를 영문 한글 순서로 지정할 경우 영문/숫자-> 영문폰트 적용 한글은 한글폰트가 적용된다
-	 */
-	font-size: 12px;
-	line-height: 1;
-	color: #333;
-	font-weight: 500;
-	font-size: 1.5rem;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	letter-spacing: -0.1rem;
-}
+	@charset "UTF-8";
 
-a, span, strong, i {
-	display: inline-block;
-	vertical-align: middle
-}
-
-caption, hr, input[type=checkbox], input[type=radio] {
-	display: inline;
-}
-
-caption{
-	display: none;
-}
-select, select:focus {
-	outline: 0
-}
-
-input[type=radio], input[type=checkbox] {
-	margin: 0px 3px 0px 0px;
-}
-
-input[type=text]::-webkit-input-placeholder {
-	border-radius: 10px;
-	display: inline-block;
-	margin: -2px 10px 0 10px;
-	vertical-align: middle;
-	font-size: 1.5rem;
-	font-weight: 500;
-	color: #1888cb;
-	font-style: normal;
-}
-
-input[type=text]::-moz-placeholder {
-	border-radius: 10px;
-	display: inline-block;
-	margin: -2px 10px 0 10px;
-	vertical-align: middle;
-	font-size: 1.5rem;
-	font-weight: 500;
-	color: #1888cb;
-	font-style: normal;
-}
-
-input[type=text]::-ms-input-placeholder {
-	border-radius: 10px;
-	display: inline-block;
-	margin: -2px 10px 0 10px;
-	vertical-align: middle;
-	font-size: 1.5rem;
-	font-weight: 500;
-	color: #1888cb;
-	font-style: normal;
-}
-
-input[type=password] {
-	font-family: 'NanumBarunGothic';
-	font-size: 1.5rem;
-	font-weight: 500;
-	color: #1888cb;
-}
-
-fieldset {
-	border: 0;
-	vertical-align: top
-}
-
-dl, li, menu, ol, ul {
-	list-style: none
-}
-
-button {
-	overflow: visible;
-	border: 0;
-	background-color: transparent;
-	background-color: transparent;
-	border-radius: 0px;
-	cursor: pointer;
-	letter-spacing: 0;
-}
-
-button::-moz-focus-inner {
-	padding: 0;
-	border: 0
-}
-
-button, input, select, textarea {
-	vertical-align: middle
-}
-
-label {
-	cursor: pointer;
-	vertical-align: middle;
-	display: inline-block;
-}
-
-input, select, textarea, button {
-	font: inherit;
-	color: inherit;
-	vertical-align: middle;
-}
-
-address, caption, em {
-	font-style: normal
-}
-
-.blind {
-	overflow: hidden !important;
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0) !important;
-	width: 1px !important;
-	height: 1px !important;
-	margin: -1px !important
-}
-
-figure {
-	margin: 0
-}
-
-header input[type=text] {
-	padding: 10px 0 10px 20px;
-	border: 1px solid #fff;
-	border-radius: 60px;
-	margin: 7px 0 0 5px;
-}
-
-textarea {
-	padding: 10px;
-	width: 100%;
-	overflow-y: auto;
-	border: 0;
-	background: #e8eaeb;
-	height: 300px
-}
-
-input {
-	border: 1px solid #e8e8e8;
-	padding: 0 10px;
-	width: 100%
-}
-
-input[type=checkbox]+label, input[type=radio]+label {
-	cursor: pointer
-}
-
-input[type=checkbox]+label span {
-	display: inline-block;
-	width: 26px;
-	height: 26px;
-	margin: -2px 10px 0 0;
-	vertical-align: middle;
-	background: url() 0 0 no-repeat;
-	cursor: pointer
-}
-
-input[type=radio]+label span {
-	display: inline-block;
-	width: 26px;
-	height: 26px;
-	margin: -2px 10px 0 0;
-	padding: 1px 30px;
-	vertical-align: middle;
-	background: url() 0 0 no-repeat;
-	cursor: pointer
-}
-
-input[type=checkbox]:checked+label, 
-input[type=radio]:checked+label {
-	color: #000
-}
-
-input[type=checkbox]:checked+label span {
-	background: url() 0 0 no-repeat
-}
-
-input[type=radio]:checked+label span {
-	background: url() 0 0 no-repeat
-}
-
-select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	display: block;
-	padding: 0 5px;
-	border: 1px solid #e8e8e8;
-	width: 100%;
-	-webkit-appearance: none;
-}
-
-select::-ms-expand {
-	display: none
-}
-
-article, aside, details, figcaption, figire, footer, header, hgroup,
-	menu, nav, section {
-	display: block;
-}
-
-ul, li, ol, dl {
-	height: auto;
-	overflow: hidden;
-	list-style: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	table-layout: fixed;
-	border: 0;
-	width: 100%
-}
-
-img, video i {
-	vertical-align: middle;
-	width: 100%;
-	max-width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-input:-webkit-autofill {
-	-webkit-box-shadow: 0 0 0 1000px #f6f8f9 inset !important;
-}
-
-input:focus { outline: none; }
-
-select::-ms-expand {
-	display: none;
-}
-
-select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-
-textarea {
-	resize: none;
-}
-
-div, nav, section, footer {
-	height: auto;
-}
-
-div, span, h1, h2, h3, h4, h5 {
-	word-break: keep-all;
-}
-
-section {
-	position: relative;
-}
-
-section::after, div::after {
-	position: relative;
-	display: block;
-	content: '';
-	clear: both;
-}
-
-a, a, a:active, a:focus, a:hover {
-	color: #000000;
-	text-decoration: none
-}
-
-/* 스크롤 속성지정 */
-::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #ddd;
-	border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: #404040;
-}
-
-::-webkit-scrollbar-thumb:active {
-	background: #808080;
-}
-
-::-webkit-scrollbar-button {
-	display: none;
-}
-
-/* common ================================================================ */
-body {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-}
-
-@media screen and (max-width: 1300px) {
-	body {
-		/* 바디 폰트 사이즈만 변경해주면 각 해상도별 폰트사이즈 제어 가능
-   	   font-size는 픽셀로 지정하지 않고 % rem em등의 단위로 지정해서 사용한다
-   	   em은 부모태그의 사이즈값이 지정되었을 경우 부모태그의 사이즈의 영향을 받아서 나중에 개별 태그 제어가 어려울수 있다   
-    */
-		
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+		blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+		em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+		b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+		details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+		output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
 	}
-}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, footer, header, hgroup,*::before
+		menu, nav, section {
+		display: block;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
+
+	blockquote, q {
+		quotes: none;
+	}
+
+	blockquote:before, blockquote:after, q:before, q:after {
+		content: '';
+		content: none;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+
+	/* @ RESET CSS * ------------------------------- */
+	html, body, div, p, span, strong, b, em, iframe, pre, h1, h2, h3, h4, h5,
+		h6, img, dl, dt, dd, fieldset, form, legend, label, table, caption,
+		thead, tbody, tfoot, tr, th, td, ul, ol, li, a, input, select, textarea
+		{
+		margin: 0;
+		padding: 0;
+		border: 0 none;
+	}
+
+	body {
+		height: 100%;
+		width: 100%;
+		min-width: 1300px;
+		min-height: 800px;
+	}
+
+	ul, ol, li {
+		list-style: none;
+	}
+
+	em, address {
+		font-style: normal;
+	}
+
+	img {
+		border: 0 none;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	sup {
+		position: relative;
+		top: 2px;
+		font-size: 11px;
+		line-height: 100%;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	caption {
+		overflow: hidden;
+		width: 0;
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	th, td {
+		vertical-align: middle; /* white-space: nowrap */
+	}
+
+	a {
+		color: #333;
+		text-decoration: none;
+		line-height: 1;
+	}
+
+	a:hover, a:focus, a:active {
+		text-decoration: underline;
+	}
+
+	a:visited {
+		color: #333;
+	}
+
+	*, html {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+
+	/* 가독성 뛰어난 웹폰트 나눔바른고딕 링크*/
+	@charset "UTF-8";
+
+	@font-face {
+		font-family: NanumBarunGothic;
+		src: url(../Content/fonts/NanumBarunGothic.eot);
+		src: url(../Content/fonts/NanumBarunGothic.eot?#iefix)
+			format("embedded-opentype"),
+			url(../Content/fonts/NanumBarunGothic.woff) format("woff"),
+			url(../Content/fonts/NanumBarunGothic.ttf) format("truetype");
+		src: local("?"), url(../Content/fonts/NanumBarunGothic.woff)
+			format("woff")
+	}
+
+	@font-face {
+		font-family: NanumBarunGothicBold;
+		src: url(../Content/fonts/NanumBarunGothicBold.eot);
+		src: url(../Content/fonts/NanumBarunGothicBold.eot?#iefix)
+			format("embedded-opentype"),
+			url(../Content/fonts/NanumBarunGothicBold.woff) format("woff"),
+			url(../Content/fonts/NanumBarunGothicBold.ttf) format("truetype");
+		src: local("?"), url(../Content/fonts/NanumBarunGothicBold.woff)
+			format("woff")
+	}
+
+	*, *::after, *::before {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+
+	html {
+		height: 100%;
+		width: 100%;
+		font-size: 62.5%;
+		/* 
+			html overflow hidden으로 하면 컨텐츠가 다 짧림 중요 
+		*/
+	}
+
+	body, button, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6,
+		input, legend, li, ol, p, select, td, textarea, th, ul, i {
+		font-family: 'NanumBarunGothic', '맑은 고딕', '돋움', Dotum, AppleGothic, Sans-serif, Arial;
+		/* 
+			지정 순서를 영문 한글 순서로 지정할 경우 영문/숫자-> 영문폰트 적용 한글은 한글폰트가 적용된다
+		*/
+		font-size: 12px;
+		line-height: 1;
+		color: #333;
+		font-weight: 500;
+		font-size: 1.5rem;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		letter-spacing: -0.1rem;
+	}
+
+	a, span, strong, i {
+		display: inline-block;
+		vertical-align: middle
+	}
+
+	caption, hr, input[type=checkbox], input[type=radio] {
+		display: inline;
+	}
+
+	caption{
+		display: none;
+	}
+	select, select:focus {
+		outline: 0
+	}
+
+	input[type=radio], input[type=checkbox] {
+		margin: 0px 3px 0px 0px;
+	}
+
+	input[type=text]::-webkit-input-placeholder {
+		border-radius: 10px;
+		display: inline-block;
+		margin: -2px 10px 0 10px;
+		vertical-align: middle;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #1888cb;
+		font-style: normal;
+	}
+
+	input[type=text]::-moz-placeholder {
+		border-radius: 10px;
+		display: inline-block;
+		margin: -2px 10px 0 10px;
+		vertical-align: middle;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #1888cb;
+		font-style: normal;
+	}
+
+	input[type=text]::-ms-input-placeholder {
+		border-radius: 10px;
+		display: inline-block;
+		margin: -2px 10px 0 10px;
+		vertical-align: middle;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #1888cb;
+		font-style: normal;
+	}
+
+	input[type=password] {
+		font-family: 'NanumBarunGothic';
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #1888cb;
+	}
+
+	fieldset {
+		border: 0;
+		vertical-align: top
+	}
+
+	dl, li, menu, ol, ul {
+		list-style: none
+	}
+
+	button {
+		overflow: visible;
+		border: 0;
+		background-color: transparent;
+		background-color: transparent;
+		border-radius: 0px;
+		cursor: pointer;
+		letter-spacing: 0;
+	}
+
+	button::-moz-focus-inner {
+		padding: 0;
+		border: 0
+	}
+
+	button, input, select, textarea {
+		vertical-align: middle
+	}
+
+	label {
+		cursor: pointer;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	input, select, textarea, button {
+		font: inherit;
+		color: inherit;
+		vertical-align: middle;
+	}
+
+	address, caption, em {
+		font-style: normal
+	}
+
+	.blind {
+		overflow: hidden !important;
+		position: absolute !important;
+		clip: rect(0, 0, 0, 0) !important;
+		width: 1px !important;
+		height: 1px !important;
+		margin: -1px !important
+	}
+
+	figure {
+		margin: 0
+	}
+
+	header input[type=text] {
+		padding: 10px 0 10px 20px;
+		border: 1px solid #fff;
+		border-radius: 60px;
+		margin: 7px 0 0 5px;
+	}
+
+	textarea {
+		padding: 10px;
+		width: 100%;
+		overflow-y: auto;
+		border: 0;
+		background: #e8eaeb;
+		height: 300px
+	}
+
+	input {
+		border: 1px solid #e8e8e8;
+		padding: 0 10px;
+		width: 100%
+	}
+
+	input[type=checkbox]+label, input[type=radio]+label {
+		cursor: pointer
+	}
+
+	input[type=checkbox]+label span {
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+		margin: -2px 10px 0 0;
+		vertical-align: middle;
+		background: url() 0 0 no-repeat;
+		cursor: pointer
+	}
+
+	input[type=radio]+label span {
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+		margin: -2px 10px 0 0;
+		padding: 1px 30px;
+		vertical-align: middle;
+		background: url() 0 0 no-repeat;
+		cursor: pointer
+	}
+
+	input[type=checkbox]:checked+label, 
+	input[type=radio]:checked+label {
+		color: #000
+	}
+
+	input[type=checkbox]:checked+label span {
+		background: url() 0 0 no-repeat
+	}
+
+	input[type=radio]:checked+label span {
+		background: url() 0 0 no-repeat
+	}
+
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		display: block;
+		padding: 0 5px;
+		border: 1px solid #e8e8e8;
+		width: 100%;
+		-webkit-appearance: none;
+	}
+
+	select::-ms-expand {
+		display: none
+	}
+
+	article, aside, details, figcaption, figire, footer, header, hgroup,
+		menu, nav, section {
+		display: block;
+	}
+
+	ul, li, ol, dl {
+		height: auto;
+		overflow: hidden;
+		list-style: none;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		table-layout: fixed;
+		border: 0;
+		width: 100%
+	}
+
+	img, video i {
+		vertical-align: middle;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	input:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0 1000px #f6f8f9 inset !important;
+	}
+
+	input:focus { outline: none; }
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	div, nav, section, footer {
+		height: auto;
+	}
+
+	div, span, h1, h2, h3, h4, h5 {
+		word-break: keep-all;
+	}
+
+	section {
+		position: relative;
+	}
+
+	section::after, div::after {
+		position: relative;
+		display: block;
+		content: '';
+		clear: both;
+	}
+
+	a, a, a:active, a:focus, a:hover {
+		color: #000000;
+		text-decoration: none
+	}
+
+	/* 스크롤 속성지정 */
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: #fff;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ddd;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #404040;
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background: #808080;
+	}
+
+	::-webkit-scrollbar-button {
+		display: none;
+	}
+
+	/* common ================================================================ */
+	body {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	@media screen and (max-width: 1300px) {
+		body {
+			/* 바디 폰트 사이즈만 변경해주면 각 해상도별 폰트사이즈 제어 가능
+		font-size는 픽셀로 지정하지 않고 % rem em등의 단위로 지정해서 사용한다
+		em은 부모태그의 사이즈값이 지정되었을 경우 부모태그의 사이즈의 영향을 받아서 나중에 개별 태그 제어가 어려울수 있다   
+		*/
+			
+		}
+	}
