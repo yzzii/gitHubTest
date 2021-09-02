@@ -155,8 +155,10 @@
   // @8 레이어 팝업 브라우저 중앙에 띄우기
 
      // 첫 번재 항목이 펼쳐져 있도록 처리
-     $(".collapsible:eq(0) a").addClass("selected"); //첫번째 항목만 selected 클래스를 적용
-     $(".collapsible").not(":eq(0)").find(".content").hide(); //첫번째 항목 이외의 content를 숨김
+     //$(".collapsible:eq(0) a").addClass("selected"); //첫번째 항목만 selected 클래스를 적용
+     //$(".collapsible").not(":eq(0)").find(".content").hide(); //첫번째 항목 이외의 content를 숨김
+     
+     $(".collapsible").find(".content").hide(); //모든 content숨김
      
      /** 링크에 대한 클릭 이벤트 처리 */
      $(".collapsible h6").click(function() {            

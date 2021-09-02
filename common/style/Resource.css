@@ -716,7 +716,7 @@
     /* chart  */
 
     .chartArea{
-        height: 200px;
+        height: 300px;
         margin-bottom: 10px;
     }
 
@@ -730,7 +730,7 @@
 
     .chart_group {
         width: calc((100% - 30px) / 4);
-        height:200px;
+        height:100%;
         margin-right:10px;
         float:left;
     }
@@ -2179,10 +2179,12 @@
         border:1px solid var(--border-blue);
         padding: 10px;
         overflow-y: auto;
+        border-top: 0px solid var(--border-blue);
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         -webkit-border-bottom-left-radius: 5px;
         -webkit-border-bottom-right-radius: 5px;
+        
     }
 
     /* print attr */

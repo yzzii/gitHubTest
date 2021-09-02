@@ -115,7 +115,7 @@
         						beginAtZero: true,
         						stepSize : 2,
         						fontColor : "rgba(251, 203, 9, 1)",
-        						fontSize : 14,
+        						fontSize : 12,
         					},
         					gridLines:{
         						color: 'rgba(166, 201, 226, 1)',
