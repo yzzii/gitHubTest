@@ -178,6 +178,15 @@
          return false;
      });
 
+  //lading images
+  $("body").load(function (){
+		//var body = $("#contentsFrame").contents().find("body");
+		var chk = $("body").find("#loadingBar").length;
+		if(chk == 0){
+			body.append("<img id='loadingGif' style='border:1px solid #00DEFF; width: 436px; height: 187px; position: absolute; top: 50%; left: 50%; margin:-98px 0px 0px -218px; z-index: 99999; display:none;' src='../../images/loading.gif'>");
+		}
+	});
+  
 
   //@6 selectBox
   var x, i, j, l, ll, selElmnt, a, b, c;
