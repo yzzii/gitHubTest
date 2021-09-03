@@ -1549,7 +1549,7 @@
         height:calc((100% - 20px) / 5);
     } 
 
-    /* li n개까지 속성 정의 열 4개 */
+    /* li n개까지 속성 정의 열 4개  */
 
     .searchArea.n li {
         width:calc((100% - 30px) / 4);
@@ -1568,6 +1568,7 @@
             margin-bottom: 5px;
     }
 
+    /* 마지막 남는 열에 따라서 삭제 */
     .searchArea.n li:first-child:nth-last-child(16), 
     .searchArea.n li:nth-last-child(-n+4) ~ li{ 
             margin-bottom: 0px;
@@ -2142,11 +2143,38 @@
 
 
     /* 접기 펼치기 */
+    .folding_wrap{
+        height:600px;
+        width:500px;
+        border: 1px solid var(--border-blue);
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
 
+    .folding_content {
+        border: 1px solid var(--border-blue);
+        padding: 10px;
+        flex: 1;
+    }
 
+    .folding_close {
+        margin: 10px 0;
+        border-top: 1px solid var(--border-blue);
+        padding-top: 10px;
+        text-align: center;
+    }
 
-    /* 아코디언 */
+    .folding_wrap_txt {
+        background: var(--bg-body);
+        color: var(--font-blue);
+    }
+    .folding_wrap.open > .folding_close{
+        border-top: 0px solid var(--border-blue);
+        padding-top: 0px;
+    }
 
+    /* 아코디언 */    
     .accordian h6{
         font-size: 100%;
         padding: 10px;  

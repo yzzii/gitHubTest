@@ -129,7 +129,6 @@
 
 
   // @7 레이어 팝업 브라우저 중앙에 띄우기
-
   jQuery.fn.center = function () {
     this.css("position","absolute");
     this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
@@ -150,10 +149,21 @@
     $("#popWarp").draggable();
     });
 
+    
+
+  // @8 접기_펼치기
+  $(".folding_close").click(function() {  
+    if($(".folding_wrap_txt").css("display") == "none"){
+      $(".folding_wrap_txt").show();
+      $(this).parents(".folding_wrap").removeClass("open");
+    } else{
+      $(".folding_wrap_txt").hide();
+      $(this).parents(".folding_wrap").addClass("open");
+    }
+  });
 
 
-  // @8 레이어 팝업 브라우저 중앙에 띄우기
-
+  // @9 아코디언
      // 첫 번재 항목이 펼쳐져 있도록 처리
      //$(".collapsible:eq(0) a").addClass("selected"); //첫번째 항목만 selected 클래스를 적용
      //$(".collapsible").not(":eq(0)").find(".content").hide(); //첫번째 항목 이외의 content를 숨김
@@ -180,7 +190,7 @@
          return false;
      });
 
-  //lading images
+  //@ lading images
   $("body").load(function (){
 		//var body = $("#contentsFrame").contents().find("body");
 		var chk = $("body").find("#loadingBar").length;
