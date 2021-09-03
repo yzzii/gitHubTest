@@ -2138,7 +2138,7 @@
     }
 
     button > i+span{
-        margin-left:5px;
+        margin-left:2px;
     }
 
 
@@ -2158,7 +2158,8 @@
         flex: 1;
     }
 
-    .folding_close {
+    .folding_close,
+    .folding_open {
         margin: 10px 0;
         border-top: 1px solid var(--border-blue);
         padding-top: 10px;
@@ -2168,11 +2169,30 @@
     .folding_wrap_txt {
         background: var(--bg-body);
         color: var(--font-blue);
+        -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+        transition:width 2s, height 2s, background-color 2s, transform 2s;
     }
-    .folding_wrap.open > .folding_close{
+    .folding_wrap.open > .folding_close.show {
+        border-top: 1px solid var(--border-blue);
+        padding-top: 10px;
+    }
+
+    .folding_wrap > .folding_open{
         border-top: 0px solid var(--border-blue);
         padding-top: 0px;
     }
+
+    .folding_open{
+        display: none;
+    }
+
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+
 
     /* 아코디언 */    
     .accordian h6{
@@ -2197,7 +2217,9 @@
         /*그라디언트 지정*/
         background: linear-gradient(top, #6bb2ff 0%, #2288dd 100%) !important;
         background: -moz-linear-gradient(top, #6bb2ff, #2288dd) !important; 
-        background: -webkit-gradient(linear, left top, left bottom, from(#6bb2ff), to(#2288dd)) !important;       
+        background: -webkit-gradient(linear, left top, left bottom, from(#6bb2ff), to(#2288dd)) !important;  
+        -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+        transition:width 2s, height 2s, background-color 2s, transform 2s;     
     }
     
     /** 내용 영역 */
@@ -2212,6 +2234,8 @@
         border-bottom-right-radius: 5px;
         -webkit-border-bottom-left-radius: 5px;
         -webkit-border-bottom-right-radius: 5px;
+        -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+        transition:width 2s, height 2s, background-color 2s, transform 2s;
         
     }
 

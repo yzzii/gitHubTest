@@ -152,13 +152,50 @@
     
 
   // @8 접기_펼치기
-  $(".folding_close").click(function() {  
+  // $(".folding_close").click(function() {  
+  //   if($(".folding_wrap_txt").css("display") == "none"){
+  //     $(".folding_wrap_txt").show();
+  //     $(this).parents(".folding_wrap").removeClass("open");
+  //   } else{
+  //     $(".folding_wrap_txt").hide();
+  //     $(this).parents(".folding_wrap").addClass("open");
+  //   }
+  // });
+
+  // 토글 사용
+  $(".folding_close").click(function(){
+    $(".folding_open").addClass("hide");
+    $(".folding_close").addClass("show");
+    $(".folding_wrap_txt").toggle();
     if($(".folding_wrap_txt").css("display") == "none"){
-      $(".folding_wrap_txt").show();
-      $(this).parents(".folding_wrap").removeClass("open");
+      $(this).parents(".folding_wrap").removeClass("open");         
+      $(".folding_close").removeClass("show");   
+      $(".folding_open").removeClass("hide");           
+      $(".folding_close").addClass("hide");       
+      $(".folding_open").addClass("show");
     } else{
-      $(".folding_wrap_txt").hide();
       $(this).parents(".folding_wrap").addClass("open");
+      $(".folding_close").removeClass("hide");   
+      $(".folding_open").removeClass("show");           
+      $(".folding_close").addClass("show");       
+      $(".folding_open").addClass("hide");
+    }
+  });
+
+  $(".folding_open").click(function(){
+    $(".folding_wrap_txt").toggle();
+    if($(".folding_wrap_txt").css("display") == "block"){
+      $(this).parents(".folding_wrap").addClass("open");
+      $(".folding_close").removeClass("hide");   
+      $(".folding_open").removeClass("show");           
+      $(".folding_close").addClass("show");       
+      $(".folding_open").addClass("hide");
+    } else{
+      $(this).parents(".folding_wrap").removeClass("open");         
+      $(".folding_close").removeClass("show");   
+      $(".folding_open").removeClass("hide");           
+      $(".folding_close").addClass("hide");       
+      $(".folding_open").addClass("show");
     }
   });
 
