@@ -1,4 +1,4 @@
-    
+$(document).ready(function(event){  
   /* @1 좌측메뉴 */
   var $menu = $("ul.menu li");
   $('.sub_menu').addClass("hide");
@@ -226,6 +226,45 @@
          // 링크 페이지 이동 중지
          return false;
      });
+
+
+     $(function () {
+      jQuery.datetimepicker.setLocale('kr');
+
+      jQuery('#datetime_picker').datetimepicker({
+      i18n:{
+      de:{
+      months:[
+        '1월','2월','3월','4월',
+        '5월','6월','7월','8월',
+        '9월','10월','11월','12월',
+      ],
+      dayOfWeek:[
+        "일", "월", "화", "수", 
+        "목", "금", "토.",
+      ]
+      }
+      },
+      timepicker:false,
+      format:'d.m.Y'
+      });
+    });
+    
+  });
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("mouseover", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+    }
 
   //@ lading images
   $("body").load(function (){
