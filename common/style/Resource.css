@@ -717,7 +717,8 @@
 
     .chartArea{
         height: 300px;
-        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
     }
 
     .chartArea:nth-child(5){
@@ -928,6 +929,7 @@
         margin-bottom:10px;
         display: flex;
         flex-direction: column;
+        gap:10px
     }
 
     .result_area:nth-of-type(5){
