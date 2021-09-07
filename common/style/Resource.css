@@ -2241,6 +2241,30 @@
         
     }
 
+
+    /* td 자동 번호삽입 */
+    .colinfo{
+        border:1px solid var(--border-blue);
+        border-left:0px solid var(--border-blue);
+    }
+    .colinfo tr td{
+        border-left:1px solid var(--border-blue);
+        padding: 10px;
+        text-align: center;
+    }
+    .colinfo tr td:last-child{
+        border-left:1px solid var(--border-blue);
+    }
+    [class^=colinfo] tr{ counter-reset: mycounter;}
+    [class^=colinfo] tr>td:before {  
+        counter-increment: mycounter;
+    content: counter(mycounter) "열";} 
+    [class^=colinfo] tr{ counter-reset: mycounter; }
+
+    [class^=colinfo] tr>td:first-child {  
+        color:var(--bg-body)
+    }
+
     /* print attr */
 
     page {
