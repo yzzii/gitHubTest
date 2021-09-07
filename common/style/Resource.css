@@ -2258,15 +2258,30 @@
     .colinfo tr td:last-child{
         border-left:1px solid var(--border-blue);
     }
-    [class^=colinfo] tr{ counter-reset: mycounter;}
+
+    [class^=colinfo] tr{ 
+        /* counter-reset: mycounter; */
+        counter-reset: mycounter 2; /* 2번까지 reset 3번부터 시작 */
+    }
     [class^=colinfo] tr>td:before {  
         counter-increment: mycounter;
-    content: counter(mycounter) "열";} 
-    [class^=colinfo] tr{ counter-reset: mycounter; }
-
+        content: counter(mycounter) "열";
+    } 
     [class^=colinfo] tr>td:first-child {  
         color:var(--bg-body)
     }
+
+    /* margin 대신 gap으로 균일하게 영역 만들기 */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px 20px;
+      }
+    .grid-container > div {
+        border: 1px solid var(--border-table-color);
+        background-color:var(--bg-data-blue);
+      }
 
     /* print attr */
 
