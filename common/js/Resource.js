@@ -15,6 +15,8 @@ $(document).ready(function(event){
 		$('a').removeClass('active');
 		$('.dropdown-container').css('display', 'none');
   });
+  $('.dropdown-container').parent().css('padding-bottom', '0');
+
     
   // @2 2DepthMenuLink
   function menuClick(param){
