@@ -1,16 +1,19 @@
 $(document).ready(function(event){  
   /* @1 좌측메뉴 */
   var $menu = $("ul.menu li");
-  $('.sub_menu').addClass("hide");
-  $($menu).hover(function() {
-    $(this).addClass('menu_bg');
-    $(this).children('.sub_menu').removeClass('hide');
-    $(this).children('i').addClass('hover');
-    $(this).children('span').addClass('hover');
-  }, function() {
-    $(this).children('.sub_menu').addClass('hide');
-    $(this).removeClass('menu_bg');
-    $(this).children().removeClass('hover');
+  var $menu = $("ul.menu li");
+	$('.sub_menu').addClass("hide");
+	$($menu).hover(function() {
+		$(this).addClass('menu_bg');
+		$(this).children('.sub_menu').removeClass('hide');
+		$(this).children('i').addClass('hover');
+		$(this).children('span').addClass('hover');
+	}, function() {
+		$(this).children('.sub_menu').addClass('hide');
+		$(this).removeClass('menu_bg');
+		$(this).children().removeClass('hover');
+		$('a').removeClass('active');
+		$('.dropdown-container').css('display', 'none');
   });
     
   // @2 2DepthMenuLink
@@ -259,6 +262,7 @@ $(document).ready(function(event){
     });
     
   });
+  
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
 
