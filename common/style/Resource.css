@@ -1,9 +1,9 @@
-    /* 현재 사용하고 있는 plugin css
+    @charset "utf-8"; /* utf-8 반드시 넣어주기 현재 사용하고 있는 plugin css
         datetimepicker
     */
-
+    
     @import url(jquery.datetimepicker.css);
-
+    
     /* 
         Page 공통 ================================================================ 
         모든 컨텐츠 간격은 10px로 동일하게 적용
